@@ -1,61 +1,79 @@
-import { Hammer, Clock, ShieldCheck, Heart, MapPin } from "lucide-react";
+import { Clock, Hammer, Heart, MapPin, ShieldCheck } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 const points = [
   {
     icon: Hammer,
-    title: "Quality Construction",
-    body: "Engineered with audited materials, ethical practices and uncompromising structural standards across every project.",
+    title: "Quality construction",
+    body: "Audited materials, ethical practices and uncompromising structural standards on every floor we pour.",
   },
   {
     icon: Clock,
-    title: "Timely Delivery",
-    body: "A consistent track record of on-time possession across 12+ delivered projects — your timeline is our promise.",
+    title: "Timely delivery",
+    body: "A consistent record of on-time possession across 12+ delivered projects. Your timeline is our promise.",
   },
   {
     icon: ShieldCheck,
-    title: "Transparent Dealings",
-    body: "Clear pricing, honest paperwork and full disclosure at every stage. No hidden costs, no surprises — ever.",
+    title: "Transparent dealings",
+    body: "MahaRERA registered, clear pricing and honest paperwork at every stage. No hidden costs — ever.",
   },
   {
     icon: MapPin,
-    title: "Strategic PCMC Locations",
-    body: "Hand-picked addresses across Pradhikaran, Ravet, Moshi, Chikhali, Kiwale and Chinchwad — Pune's fastest-growing zones.",
+    title: "Strategic PCMC locations",
+    body: "Hand-picked addresses across Pradhikaran, Ravet, Moshi, Chikhali, Kiwale and Chinchwad.",
   },
   {
     icon: Heart,
-    title: "Customer Satisfaction",
-    body: "1100+ happy families and dedicated post-possession support. We're built on relationships, not transactions.",
+    title: "Customer satisfaction",
+    body: "1100+ families and dedicated post-possession support. We are built on relationships, not transactions.",
   },
 ];
 
 export const WhyChooseUs = () => {
   return (
-    <section className="bg-background py-24 md:py-36">
+    <section id="why" className="bg-secondary/50 py-24 md:py-32">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-2 md:items-end">
           <div>
-          <p className="flex items-center gap-4 text-[11px] uppercase tracking-[0.35em] text-muted-foreground">
-            <span className="hairline" /> Why Choose Us
-          </p>
-          <h2 className="mt-6 text-balance font-serif text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-foreground md:text-6xl">
-            A reputation<br /><span className="text-gold-deep">you can inhabit.</span>
-          </h2>
+            <p className="eyebrow">
+              <span className="hairline-gold" /> Why choose us
+            </p>
+            <h2 className="mt-6 text-balance font-serif text-[clamp(2.4rem,5vw,4.2rem)] font-semibold leading-[0.94] tracking-[-0.055em] text-foreground">
+              A reputation
+              <br />
+              <span className="text-gold">you can inhabit.</span>
+            </h2>
           </div>
-          <p className="mt-6 text-muted-foreground">
-            Led by Mr. Rajesh Patni — a visionary with deep local insight into PCMC's most promising neighbourhoods.
+          <p className="text-muted-foreground md:pb-3">
+            Led by {SITE.founder} — a developer with two decades of local insight into PCMC's
+            most promising neighbourhoods.
           </p>
         </div>
 
-        <div className="mt-16 grid border-l border-t border-border md:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl bg-border md:grid-cols-2 lg:grid-cols-5">
           {points.map((p, index) => (
-            <div key={p.title} className="group min-h-[265px] border-b border-r border-border p-6 transition-colors duration-500 hover:bg-primary md:p-7 lg:min-h-[330px]">
+            <div
+              key={p.title}
+              className="group relative flex min-h-[260px] flex-col justify-between bg-background p-7 transition-colors duration-500 hover:bg-primary lg:min-h-[320px]"
+            >
               <div className="flex items-start justify-between">
-                <p.icon className="h-7 w-7 text-foreground transition-colors duration-500 group-hover:text-gold" strokeWidth={1.25} />
-                <span className="text-[10px] tracking-[0.24em] text-muted-foreground transition-colors group-hover:text-primary-foreground/45">0{index + 1}</span>
+                <p.icon
+                  className="h-6 w-6 text-foreground transition-colors duration-500 group-hover:text-white"
+                  strokeWidth={1.25}
+                />
+                <span className="text-[10px] tracking-[0.24em] text-muted-foreground transition-colors duration-500 group-hover:text-white/40">
+                  0{index + 1}
+                </span>
               </div>
-              <h3 className="mt-16 font-serif text-2xl font-normal leading-[1.05] text-foreground transition-colors duration-500 group-hover:text-primary-foreground">{p.title}</h3>
-              <div className="mt-5 h-px w-8 bg-gold" />
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground transition-colors duration-500 group-hover:text-primary-foreground/60">{p.body}</p>
+              <div>
+                <h3 className="font-serif text-xl font-semibold leading-tight tracking-[-0.035em] text-foreground transition-colors duration-500 group-hover:text-white">
+                  {p.title}
+                </h3>
+                <div className="mt-4 h-px w-7 bg-gold transition-all duration-500 group-hover:w-14" />
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground transition-colors duration-500 group-hover:text-white/60">
+                  {p.body}
+                </p>
+              </div>
             </div>
           ))}
         </div>
