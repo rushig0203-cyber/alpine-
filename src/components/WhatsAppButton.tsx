@@ -1,45 +1,39 @@
-import { useState, useRef } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, Send, X } from "lucide-react";
+import { useRef, useState, type KeyboardEvent } from "react";
+import { SITE, waLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
-
-const PHONE = "918421337090";
-const DISPLAY = "+91 84213 37090";
 
 const QUICK_REPLIES = [
   "I'd like to know about Alpine Astonia",
-  "Share latest project brochure",
+  "Share the latest project brochure",
   "Schedule a site visit",
   "Pricing & availability",
 ];
 
-const waUrl = (text: string) =>
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
-
-export const WhatsAppButton = () => {
+export const WhatsAppButton = ({ raised = false }: { raised?: boolean }) => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const sendLinkRef = useRef<HTMLAnchorElement>(null);
 
   const defaultText = "Hello Alpine Landmarks, I'd like to enquire.";
-  const sendHref = waUrl(message.trim() || defaultText);
+  const sendHref = waLink(message.trim() || defaultText);
 
-  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      sendLinkRef.current?.click();
-      setMessage("");
-    }
+  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    sendLinkRef.current?.click();
+    setMessage("");
   };
 
   return (
     <>
-      {/* Chat panel */}
       <div
         className={cn(
-          "fixed bottom-24 right-4 z-40 w-[min(22rem,calc(100vw-2rem))] origin-bottom-right overflow-hidden rounded-2xl border border-border bg-background shadow-2xl transition-all duration-300 sm:right-6",
+          "fixed right-4 z-40 w-[min(22rem,calc(100vw-2rem))] origin-bottom-right overflow-hidden rounded-2xl border border-border bg-background shadow-2xl transition-all duration-300 sm:right-6",
+          raised ? "bottom-40 md:bottom-24" : "bottom-24",
           open
-            ? "scale-100 opacity-100 translate-y-0"
-            : "pointer-events-none scale-95 opacity-0 translate-y-2"
+            ? "translate-y-0 scale-100 opacity-100"
+            : "pointer-events-none translate-y-2 scale-95 opacity-0",
         )}
         role="dialog"
         aria-label="WhatsApp chat"
@@ -49,10 +43,11 @@ export const WhatsAppButton = () => {
             <MessageCircle className="h-5 w-5" strokeWidth={1.75} />
           </span>
           <div className="flex-1 leading-tight">
-            <div className="font-serif text-base">Alpine Landmarks</div>
+            <div className="font-serif text-base">{SITE.shortName}</div>
             <div className="text-[11px] text-white/80">Typically replies in minutes</div>
           </div>
           <button
+            type="button"
             onClick={() => setOpen(false)}
             aria-label="Close chat"
             className="rounded-full p-1 text-white/80 transition hover:bg-white/15 hover:text-white"
@@ -61,16 +56,15 @@ export const WhatsAppButton = () => {
           </button>
         </div>
 
-        <div className="space-y-3 bg-secondary/40 px-4 py-4">
+        <div className="space-y-3 bg-secondary/60 px-4 py-4">
           <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-background px-3.5 py-2.5 text-sm text-foreground shadow-sm">
             👋 Hello! How can our sales team help you today?
           </div>
-
           <div className="space-y-2 pt-1">
             {QUICK_REPLIES.map((q) => (
               <a
                 key={q}
-                href={waUrl(q)}
+                href={waLink(q)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full rounded-full border border-border bg-background px-3.5 py-2 text-left text-xs text-foreground transition hover:border-gold hover:text-gold"
@@ -84,9 +78,10 @@ export const WhatsAppButton = () => {
         <div className="flex items-center gap-2 border-t border-border bg-background px-3 py-2.5">
           <input
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(event) => setMessage(event.target.value)}
             onKeyDown={onKeyDown}
             placeholder="Type a message…"
+            aria-label="WhatsApp message"
             className="flex-1 bg-transparent px-2 py-1.5 text-sm text-foreground outline-none placeholder:text-muted-foreground"
           />
           <a
@@ -102,15 +97,18 @@ export const WhatsAppButton = () => {
           </a>
         </div>
         <div className="bg-background px-4 pb-2.5 text-center text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          Chat on WhatsApp · {DISPLAY}
+          Chat on WhatsApp · {SITE.phone}
         </div>
       </div>
 
-      {/* Floating button */}
       <button
+        type="button"
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close WhatsApp chat" : "Open WhatsApp chat"}
-        className="fixed bottom-6 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,40%)] text-white shadow-soft transition-luxury hover:scale-105 hover:bg-[hsl(142,70%,35%)] sm:right-6"
+        className={cn(
+          "fixed right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,40%)] text-white shadow-soft transition-transform duration-500 hover:scale-105 sm:right-6",
+          raised ? "bottom-24 md:bottom-6" : "bottom-6",
+        )}
       >
         {open ? (
           <X className="h-6 w-6" strokeWidth={1.75} />
