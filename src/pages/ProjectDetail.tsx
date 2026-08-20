@@ -229,7 +229,7 @@ const ProjectDetail = () => {
                       src={a.image}
                       alt={`${a.label} at ${project.name}`}
                       label={a.label}
-                      className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform [transition-duration:1400ms] group-hover:scale-105"
                     />
                   </div>
                   <figcaption className="flex items-center gap-3 border-t border-border px-6 py-5">
@@ -263,7 +263,7 @@ const ProjectDetail = () => {
                   src={src}
                   alt={`${project.name} gallery ${i + 1}`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] hover:scale-105"
+                  className="h-full w-full object-cover transition-transform [transition-duration:1400ms] hover:scale-105"
                 />
               </div>
             ))}

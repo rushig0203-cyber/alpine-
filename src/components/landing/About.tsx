@@ -12,7 +12,7 @@ export const About = () => {
               src={interior}
               alt="Interior of an Alpine Landmarks residence"
               loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-[1800ms] hover:scale-105"
+              className="h-full w-full object-cover transition-transform [transition-duration:1800ms] hover:scale-105"
             />
           </div>
           <p className="absolute -bottom-5 right-4 rounded-full bg-primary px-5 py-3 text-[10px] uppercase tracking-[0.24em] text-primary-foreground shadow-soft">

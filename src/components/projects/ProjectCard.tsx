@@ -33,7 +33,7 @@ export function ProjectCard({
               src={project.cover}
               alt={`${project.name}, ${project.location}`}
               loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.07]"
+              className="h-full w-full object-cover transition-transform [transition-duration:1400ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.07]"
             />
           </div>
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(6,14,24,0.32)_0%,rgba(6,14,24,0)_35%,rgba(6,14,24,0.78)_100%)]" />
