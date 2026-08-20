@@ -54,6 +54,11 @@ node -e "const g=require('/tmp/geom.cjs');require('fs').writeFileSync('/tmp/asto
 python3 scripts/preview_model.py         # writes /tmp/preview-act*.png
 ```
 
+`scripts/model-preview.png` is the output of that tool for the four landing-page
+camera acts (flat-shaded, so it under-sells the real materials and lighting):
+
+![Alpine Astonia model, four landing-page camera acts](scripts/model-preview.png)
+
 ### Swapping in a real GLB
 
 When a final architectural model exists, drop a Draco-compressed `.glb` into
