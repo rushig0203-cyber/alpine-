@@ -6,9 +6,9 @@ import astoniaDusk from "@/assets/astonia-dusk.jpg";
 type Act = { eyebrow: string; title: [string, string]; body: string; stats?: [string, string][] };
 
 const ACTS: Act[] = [
-  { eyebrow: "Alpine Landmarks LLP · PCMC, Pune · Est. 2006", title: ["We build", "landmarks."], body: "Alpine Astonia, Kiwale — a considered address with homes, retail and everyday life in one connected landmark." },
-  { eyebrow: "The High Street", title: ["A high street", "at your door."], body: "39 ground-floor shops and a double-height lobby make daily life effortlessly close — cafés, groceries and services, one lift ride away.", stats: [["39", "Ground-floor shops"], ["4,00,000", "Built-up sq.ft."], ["67,000", "Plot sq.ft."]] },
-  { eyebrow: "The Podium", title: ["Life above", "the city."], body: "A raised amenity deck brings together the pool, lawn, pergola lounge and play courts — leaving the bustle below.", stats: [["12+", "Amenities"], ["2 & 3 BHK", "Homes"], ["24 / 7", "Security"]] },
+  { eyebrow: "Alpine Astonia · Kiwale, Pune", title: ["A landmark", "in Kiwale."], body: "A thoughtfully planned residential and retail address by Alpine Landmarks LLP." },
+  { eyebrow: "The High Street", title: ["Retail at", "your door."], body: "The registered project includes 39 shop units alongside 2 and 3 BHK residences.", stats: [["39", "Shop units"], ["2 BHK", "Homes"], ["3 BHK", "Homes"]] },
+  { eyebrow: "The Address", title: ["Space for", "everyday life."], body: "Alpine Astonia covers 3,936.63 sq. m. in Kiwale and is planned across two wings.", stats: [["3,936.63", "Sq. m. site"], ["0.97", "Acres"], ["2", "Wings"]] },
 ];
 
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
