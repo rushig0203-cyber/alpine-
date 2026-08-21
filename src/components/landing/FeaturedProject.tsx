@@ -6,9 +6,9 @@ import brochure from "@/assets/alpine-astonia-brochure.pdf.asset.json";
 import { SITE } from "@/lib/site";
 
 const FACTS = [
-  ["197", "Apartments"],
-  ["39", "Retail shops"],
-  ["4 L", "Built-up sq.ft."],
+  ["₹67.32L", "2 BHK from"],
+  ["₹87.95L", "3 BHK from"],
+  ["Pool", "With deck"],
   ["2 & 3", "BHK homes"],
 ];
 
@@ -31,9 +31,9 @@ export const FeaturedProject = () => {
             </p>
 
             <p className="mt-8 max-w-lg text-base leading-relaxed text-white/65">
-              197 premium residences rising above a 39-shop retail plaza, across 4,00,000 sq.ft.
-              of built-up area — and the one address on this site you can walk through in
-              real-time 3D before you visit.
+              Finely crafted 2 and 3 BHK homes in Kiwale, with a pool deck, landscaped
+              spaces and thoughtful everyday amenities. Explore the address in real-time 3D
+              before you visit.
             </p>
 
             <dl className="mt-11 grid max-w-xl grid-cols-2 gap-y-8 border-y border-white/15 py-8 sm:grid-cols-4">
@@ -87,7 +87,7 @@ export const FeaturedProject = () => {
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.26em] text-white/60">Possession</p>
-                  <p className="mt-1.5 font-serif text-xl">Ready to move</p>
+                  <p className="mt-1.5 font-serif text-xl">Nearing possession</p>
                 </div>
                 <span className="rounded-full border border-white/30 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white/80">
                   2 & 3 BHK

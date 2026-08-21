@@ -6,9 +6,9 @@ import astoniaDusk from "@/assets/astonia-dusk.jpg";
 type Act = { eyebrow: string; title: [string, string]; body: string; stats?: [string, string][] };
 
 const ACTS: Act[] = [
-  { eyebrow: "Alpine Astonia · Kiwale, Pune", title: ["A landmark", "in Kiwale."], body: "A thoughtfully planned residential and retail address by Alpine Landmarks LLP." },
-  { eyebrow: "The High Street", title: ["Retail at", "your door."], body: "The registered project includes 39 shop units alongside 2 and 3 BHK residences.", stats: [["39", "Shop units"], ["2 BHK", "Homes"], ["3 BHK", "Homes"]] },
-  { eyebrow: "The Address", title: ["Space for", "everyday life."], body: "Alpine Astonia covers 3,936.63 sq. m. in Kiwale and is planned across two wings.", stats: [["3,936.63", "Sq. m. site"], ["0.97", "Acres"], ["2", "Wings"]] },
+  { eyebrow: "Alpine Astonia · Kiwale, Pune", title: ["Finely crafted", "2 & 3 BHK homes."], body: "A modern residential address designed for an uplifting lifestyle in Kiwale.", stats: [["₹67.32L", "2 BHK from"], ["₹87.95L", "3 BHK from"], ["All incl.", "Pricing"]] },
+  { eyebrow: "Elevate your lifestyle", title: ["Amenities for", "everyday living."], body: "From a swimming pool and gym to landscaped gardens, a yoga deck and spaces to gather, the lifestyle is designed around your day.", stats: [["Pool", "With deck"], ["Gym", "Fitness"], ["Yoga", "Open deck"]] },
+  { eyebrow: "Kiwale, Pune", title: ["Connected to", "what matters."], body: "Convenient access to NH 48, the Aundh-Ravet BRTS Road and the Mumbai-Pune Expressway keeps work, learning and leisure within easy reach.", stats: [["NH 48", "Connectivity"], ["BRTS", "Road access"], ["Expressway", "Nearby"]] },
 ];
 
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
