@@ -22,12 +22,12 @@ import {
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { submitEnquiry } from "@/lib/enquiries";
 import { SITE, waLink } from "@/lib/site";
-import heroBuilding from "@/assets/hero-building.jpg";
-import heroAstonia from "@/assets/hero-astonia.jpg";
-import pool from "@/assets/astonia-day.jpg";
-import garden from "@/assets/alpine-garden.jpg";
-import living from "@/assets/interior-living.jpg";
-import bedroom from "@/assets/interior-bedroom.jpg";
+import heroBuilding from "@/assets/astonia-hero-nature.jpg";
+import heroAstonia from "@/assets/astonia-hero-nature.jpg";
+import pool from "@/assets/astonia-pool-nature.jpg";
+import garden from "@/assets/astonia-garden-nature.jpg";
+import living from "@/assets/astonia-living-nature.jpg";
+import bedroom from "@/assets/astonia-bedroom-nature.jpg";
 
 const navItems = [
   { label: "About", href: "#about" },
