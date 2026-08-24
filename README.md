@@ -1,24 +1,28 @@
-# Alpine Landmarks LLP
+# Alpine Astonia — standalone project site
 
-Marketing site for Alpine Landmarks LLP (Pimpri-Chinchwad, Pune), built with Vite,
-React, TypeScript and Tailwind.
+A modern, standalone project website for Alpine Astonia in Kiwale, Pune, built with
+Vite, React, TypeScript and Tailwind. The home route is a focused launch experience
+for this development rather than a general Alpine Landmarks portfolio page.
 
-The differentiator is the **Alpine Astonia digital twin**: a real-time, procedurally
-modelled version of the project that visitors scroll through on the landing page and
-explore freely on `/projects/alpine-astonia/experience`.
+The site keeps the supplied project content — 2 & 3 BHK pricing, amenities,
+specifications, connectivity, floor plans, MahaRERA information and enquiry details —
+and presents it through an editorial, image-led interface with responsive navigation,
+interactive amenity tabs, expandable specifications, floor-plan previews and a working
+enquiry-to-WhatsApp fallback.
 
 ## Routes
 
 | Route | Page |
 | --- | --- |
-| `/` | Landing page — scroll-driven 3D stage + editorial sections |
+| `/` | Alpine Astonia launch page — project details, amenities, plans, location and enquiry |
 | `/projects` | Filterable portfolio index |
 | `/projects/:slug` | Project detail (overview, amenities, plans, videos, map, enquiry) |
 | `/projects/alpine-astonia/experience` | Full digital twin — orbit, hotspots, floor selector, time of day |
 | `*` | Branded 404 |
 
-## The 3D system
+## The optional 3D experience
 
+The immersive project viewer remains available at `/projects/alpine-astonia/experience`.
 Everything lives in `src/components/three/astonia/`:
 
 - `geometry.ts` — pure data. Boxes describing the two towers, the retail podium, the
@@ -27,7 +31,7 @@ Everything lives in `src/components/three/astonia/`:
 - `Atmosphere.tsx` — sky dome, sun rig, fog and a procedural reflection probe
   (`<Environment>` + `<Lightformer>`, so no HDR file is ever downloaded).
 - `time.ts` — dawn / day / dusk / night presets. Every value is damped, never snapped.
-- `CinematicRig.tsx` — maps landing-page scroll progress onto camera keyframes.
+- `CinematicRig.tsx` — maps the experience scroll progress onto camera keyframes.
 - `twin.tsx` — orbit controls, hotspots and the floor highlight for the experience page.
 - `AstoniaCanvas.tsx` — the single `<Canvas>` wrapper (tone mapping, bloom, vignette, SMAA).
 
