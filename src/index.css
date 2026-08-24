@@ -762,3 +762,262 @@
   .aston-developer-layout { grid-template-columns: 1fr; gap: 43px; }
   .aston-developer-image { width: 92%; }
 }
+
+/* --------------------------------------------------------------------------
+   Astonia v2 visual direction
+   Fresh, bright and architectural: a cobalt-and-lime system with oversized
+   sans typography, soft cards and a deliberately asymmetric layout.
+   -------------------------------------------------------------------------- */
+.aston-page {
+  --aston-paper: #f7f9f8;
+  --aston-warm: #eef2f7;
+  --aston-ink: #101a35;
+  --aston-muted: #69758d;
+  --aston-rust: #3158ef;
+  --aston-rust-dark: #2443bd;
+  --aston-forest: #14265f;
+  --aston-line: rgba(16, 26, 53, .13);
+  background: var(--aston-paper);
+  color: var(--aston-ink);
+  font-family: "Manrope", "DM Sans", system-ui, sans-serif;
+}
+.aston-page .aston-container { width: min(1280px, calc(100% - 88px)); }
+.aston-page .aston-section { padding: 136px 0; }
+.aston-page .aston-header { top: 16px; color: var(--aston-ink); background: transparent; box-shadow: none; }
+.aston-page .aston-header-scrolled { top: 0; color: var(--aston-ink); background: transparent; box-shadow: none; }
+.aston-page .aston-nav { min-height: 68px; padding: 0 11px 0 20px; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; background: rgba(255,255,255,.85); box-shadow: 0 14px 34px rgba(16,26,53,.09); backdrop-filter: blur(20px); }
+.aston-page .aston-header-scrolled .aston-nav { border-color: rgba(16,26,53,.1); background: rgba(247,249,248,.94); }
+.aston-page .aston-brand,
+.aston-page .aston-brand-light { color: var(--aston-ink); }
+.aston-page .aston-brand-icon { width: 34px; height: 36px; padding-top: 6px; border: 0; border-radius: 10px 10px 17px 17px; color: #fff; background: var(--aston-rust); clip-path: none; font-family: "Manrope", sans-serif; font-size: 21px; font-weight: 800; }
+.aston-page .aston-brand-wordmark strong { font-family: "Manrope", sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -.07em; }
+.aston-page .aston-brand-wordmark small { margin-top: 4px; color: var(--aston-muted); font-size: 6px; font-weight: 800; letter-spacing: .24em; }
+.aston-page .aston-nav nav { gap: 28px; }
+.aston-page .aston-nav nav a { color: var(--aston-ink); font-size: 9px; font-weight: 800; letter-spacing: .13em; opacity: .65; }
+.aston-page .aston-nav nav a:hover { opacity: 1; }
+.aston-page .aston-nav-cta { border-radius: 999px; color: #fff; background: var(--aston-ink); }
+.aston-page .aston-nav-cta:hover { color: var(--aston-ink); background: #d9ef57; }
+.aston-page .aston-header-scrolled .aston-nav-cta { color: #fff; background: var(--aston-rust); }
+.aston-page .aston-header-scrolled .aston-nav-cta:hover { color: var(--aston-ink); background: #d9ef57; }
+.aston-page .aston-nav-phone { color: var(--aston-ink); }
+.aston-page .aston-menu-button { color: var(--aston-ink); }
+
+.aston-page .aston-hero { min-height: 820px; color: var(--aston-ink); background: #eaf0f8; }
+.aston-page .aston-hero-image { top: 104px; right: 4.5%; bottom: 38px; left: 51.5%; z-index: 0; overflow: hidden; border-radius: 32px; }
+.aston-page .aston-hero-image img { object-position: 54% center; filter: saturate(.93) contrast(1.03); animation: aston-hero-zoom 18s ease-out both; }
+.aston-page .aston-hero-overlay { inset: 104px 4.5% 38px 51.5%; z-index: 1; border-radius: 32px; background: linear-gradient(180deg, rgba(12,24,61,0) 48%, rgba(12,24,61,.52) 100%); }
+.aston-page .aston-hero-grid { z-index: 0; opacity: .45; background-image: linear-gradient(rgba(49,88,239,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(49,88,239,.1) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, #000 0%, transparent 63%); }
+.aston-page .aston-hero-content { display: block; min-height: 820px; padding-top: 186px; padding-bottom: 140px; }
+.aston-page .aston-hero-copy { position: relative; z-index: 2; max-width: 650px; padding-top: 0; }
+.aston-page .aston-kicker,
+.aston-page .aston-eyebrow { color: var(--aston-rust-dark); font-family: "Manrope", sans-serif; font-size: 9px; font-weight: 800; letter-spacing: .19em; }
+.aston-page .aston-kicker span { background: var(--aston-rust); }
+.aston-page .aston-hero h1 { max-width: 670px; margin: 23px 0 28px; color: var(--aston-ink); font-family: "Manrope", sans-serif; font-size: clamp(65px, 8.3vw, 125px); font-weight: 800; letter-spacing: -.105em; line-height: .79; }
+.aston-page .aston-hero h1 span { display: block; color: var(--aston-rust); }
+.aston-page .aston-hero h1 b { display: block; padding-left: 71px; color: var(--aston-ink); font-family: "Manrope", sans-serif; font-weight: 800; -webkit-text-stroke: 0; }
+.aston-page .aston-hero-subtitle { max-width: 440px; color: #536078; font-size: 15px; line-height: 1.75; }
+.aston-page .aston-hero-subtitle strong { color: var(--aston-ink); }
+.aston-page .aston-hero-actions { margin-top: 35px; }
+.aston-page .aston-button { min-height: 50px; border-radius: 999px; font-size: 9px; letter-spacing: .12em; }
+.aston-page .aston-button-solid { color: #fff; background: var(--aston-rust); }
+.aston-page .aston-button-solid:hover { color: var(--aston-ink); background: #d9ef57; }
+.aston-page .aston-button-ghost { border-color: rgba(16,26,53,.2); color: var(--aston-ink); background: rgba(255,255,255,.4); }
+.aston-page .aston-button-ghost:hover { border-color: var(--aston-ink); background: #fff; }
+.aston-page .aston-hero-side { position: absolute; right: 27px; bottom: 68px; z-index: 3; min-width: 209px; margin: 0; padding: 21px 22px 19px; border: 1px solid rgba(255,255,255,.28); border-left: 0; border-radius: 18px; color: #fff; background: rgba(20,38,95,.92); box-shadow: 0 15px 35px rgba(12,24,61,.18); backdrop-filter: blur(8px); }
+.aston-page .aston-side-label,
+.aston-page .aston-side-note { color: rgba(255,255,255,.64); font-size: 8px; letter-spacing: .15em; }
+.aston-page .aston-hero-side strong { margin: 9px 0 5px; font-family: "Manrope", sans-serif; font-size: 31px; font-weight: 800; letter-spacing: -.08em; }
+.aston-page .aston-hero-side strong small { color: #d9ef57; font-family: "Manrope", sans-serif; font-size: 17px; font-weight: 800; }
+.aston-page .aston-hero-bottom { bottom: 20px; color: #617089; }
+.aston-page .aston-scroll-line { background: var(--aston-rust); }
+.aston-page .aston-hero-rera b { color: var(--aston-ink); }
+
+.aston-page .aston-stat-strip { border: 0; color: #fff; background: var(--aston-rust); }
+.aston-page .aston-stat { min-height: 151px; border-color: rgba(255,255,255,.23); }
+.aston-page .aston-stat:first-child { border-color: rgba(255,255,255,.23); }
+.aston-page .aston-stat strong { font-family: "Manrope", sans-serif; font-size: 42px; font-weight: 800; letter-spacing: -.09em; }
+.aston-page .aston-stat strong em { color: #d9ef57; font-family: "Manrope", sans-serif; font-size: 23px; font-weight: 800; }
+.aston-page .aston-stat span { color: rgba(255,255,255,.72); font-size: 8px; letter-spacing: .16em; }
+
+.aston-page .aston-section-intro h2,
+.aston-page .aston-story-points h3,
+.aston-page .aston-amenity-copy h3,
+.aston-page .aston-price-card > strong,
+.aston-page .aston-plan-info h3,
+.aston-page .aston-plan-info > strong,
+.aston-page .aston-plan-modal h3,
+.aston-page .aston-developer-image > span,
+.aston-page .aston-developer-meta strong,
+.aston-page .aston-contact-copy h2,
+.aston-page .aston-form-head h3,
+.aston-page .aston-map-label,
+.aston-page .aston-brand-wordmark strong { font-family: "Manrope", sans-serif; }
+.aston-page .aston-section-intro h2 { font-size: clamp(39px, 5vw, 69px); font-weight: 800; line-height: .93; letter-spacing: -.09em; }
+.aston-page .aston-section-intro h2 i,
+.aston-page .aston-gallery-head h2 i,
+.aston-page .aston-pricing h2 i,
+.aston-page .aston-plans h2 i,
+.aston-page .aston-location h2 i,
+.aston-page .aston-contact h2 i { color: var(--aston-rust); font-style: normal; }
+.aston-page .aston-eyebrow-line { width: 31px; background: currentColor; }
+
+.aston-page .aston-about { background: #fff; }
+.aston-page .aston-about-layout { gap: clamp(70px, 11vw, 165px); }
+.aston-page .aston-about-media { padding: 0 20px 25px 0; }
+.aston-page .aston-image-frame { border-radius: 29px; }
+.aston-page .aston-outline-box { top: 17px; right: 0; width: 85%; height: 84%; border: 2px solid #d9ef57; border-radius: 29px; }
+.aston-page .aston-image-tag { right: -5px; bottom: 50px; border-radius: 999px; color: var(--aston-ink); background: #d9ef57; font-size: 8px; }
+.aston-page .aston-image-tag span { color: var(--aston-rust-dark); }
+.aston-page .aston-about-copy > p:not(.aston-eyebrow) { color: #647088; font-size: 14px; }
+.aston-page .aston-text-link { color: var(--aston-rust-dark); font-size: 9px; letter-spacing: .13em; }
+.aston-page .aston-text-link:hover { color: var(--aston-ink); }
+
+.aston-page .aston-story { border: 0; background: #dfe7ff; }
+.aston-page .aston-story-points { border-color: rgba(16,26,53,.17); }
+.aston-page .aston-story-points > div { border-color: rgba(16,26,53,.17); }
+.aston-page .aston-story-points > div > span,
+.aston-page .aston-story-points h3 { color: var(--aston-ink); }
+.aston-page .aston-story-points > div > span { color: var(--aston-rust-dark); }
+.aston-page .aston-story-points h3 { font-size: 21px; font-weight: 800; letter-spacing: -.06em; }
+.aston-page .aston-story-points p { color: #5e6b87; }
+
+.aston-page .aston-developer { background: #fff; }
+.aston-page .aston-developer-image { border-radius: 30px; }
+.aston-page .aston-developer-image > span { font-size: 23px; font-weight: 800; letter-spacing: -.06em; }
+.aston-page .aston-developer-image > span b { color: #d9ef57; font-family: "Manrope", sans-serif; }
+.aston-page .aston-developer-meta strong { font-size: 28px; font-weight: 800; letter-spacing: -.08em; }
+.aston-page .aston-developer-meta span { color: var(--aston-muted); }
+
+.aston-page .aston-amenities { color: #fff; background: #14265f; }
+.aston-page .aston-amenity-count span { font-family: "Manrope", sans-serif; font-weight: 800; }
+.aston-page .aston-amenities-tabs { gap: 10px; border: 0; }
+.aston-page .aston-amenities-tabs button,
+.aston-page .aston-amenities-tabs button:first-child { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: rgba(255,255,255,.62); background: rgba(255,255,255,.06); }
+.aston-page .aston-amenities-tabs button:hover,
+.aston-page .aston-amenities-tabs button.active { border-color: #d9ef57; color: #fff; background: rgba(255,255,255,.12); }
+.aston-page .aston-amenities-tabs button.active svg { color: #d9ef57; }
+.aston-page .aston-amenity-image { border-radius: 29px; }
+.aston-page .aston-amenity-image::after { background: linear-gradient(0deg, rgba(8,19,60,.5), transparent 60%); }
+.aston-page .aston-amenity-copy h3 { font-size: clamp(34px, 4vw, 55px); font-weight: 800; line-height: .94; letter-spacing: -.09em; }
+.aston-page .aston-amenity-copy li svg { color: #d9ef57; }
+.aston-page .aston-text-link-light { color: #fff; }
+.aston-page .aston-text-link-light:hover { color: #d9ef57; }
+
+.aston-page .aston-gallery { background: #fff; }
+.aston-page .aston-gallery-grid { gap: 16px; }
+.aston-page .aston-gallery-grid figure { border-radius: 27px; }
+.aston-page .aston-gallery-grid figcaption { font-size: 9px; }
+.aston-page .aston-gallery-grid figcaption span { color: #d9ef57; }
+
+.aston-page .aston-pricing { background: #eef2f7; }
+.aston-page .aston-price-cards { gap: 16px; }
+.aston-page .aston-price-card { min-height: 370px; border: 0; border-radius: 26px; background: #fff; box-shadow: 0 14px 32px rgba(16,26,53,.06); }
+.aston-page .aston-price-card-dark { color: #fff; background: #14265f; }
+.aston-page .aston-price-card-top { color: var(--aston-rust-dark); }
+.aston-page .aston-price-card-dark .aston-price-card-top { color: #d9ef57; }
+.aston-page .aston-price-card > strong { font-size: clamp(35px, 4vw, 54px); font-weight: 800; letter-spacing: -.09em; }
+.aston-page .aston-price-card > strong small { color: var(--aston-rust); font-family: "Manrope", sans-serif; font-weight: 800; }
+.aston-page .aston-price-card button { border-color: var(--aston-line); font-weight: 800; }
+.aston-page .aston-price-card-dark button { border-color: rgba(255,255,255,.2); }
+
+.aston-page .aston-plans { background: #fff; }
+.aston-page .aston-plans-badge { border-radius: 999px; color: var(--aston-rust-dark); background: #eef2f7; }
+.aston-page .aston-plan-grid { gap: 16px; }
+.aston-page .aston-plan-card { border: 0; border-radius: 26px; background: #eef2f7; overflow: hidden; }
+.aston-page .aston-plan-card:hover { border: 0; }
+.aston-page .aston-plan-card-featured { color: #fff; background: #14265f; }
+.aston-page .aston-plan-preview { background: #e4ebf8; }
+.aston-page .aston-plan-card-featured .aston-plan-preview { background: #dce6ff; }
+.aston-page .aston-plan-info h3 { font-size: 24px; font-weight: 800; letter-spacing: -.07em; }
+.aston-page .aston-plan-info > strong { font-size: 18px; font-weight: 800; }
+.aston-page .aston-plan-card-featured .aston-plan-info > strong small,
+.aston-page .aston-plan-card-featured .aston-plan-info > div > span { color: #d9ef57; }
+.aston-page .aston-plan-foot a { color: var(--aston-rust-dark); }
+.aston-page .aston-plan-modal { border-radius: 28px; }
+.aston-page .aston-plan-modal h3 { font-size: 43px; font-weight: 800; letter-spacing: -.09em; }
+.aston-page .aston-modal-close { border-radius: 50%; }
+.aston-page .plan-drawing { border-color: rgba(16,26,53,.35); border-radius: 8px; box-shadow: 8px 8px 0 rgba(49,88,239,.16); }
+
+.aston-page .aston-specs { background: #eef2f7; }
+.aston-page .aston-spec > button { padding: 21px 0; }
+.aston-page .aston-spec > button > span { font-weight: 700; }
+.aston-page .aston-spec > button svg { color: var(--aston-rust); }
+.aston-page .aston-spec > button b { color: var(--aston-rust-dark); }
+.aston-page .aston-spec-content p { color: #647088; }
+
+.aston-page .aston-location { background: #fff; }
+.aston-page .aston-location-map { min-height: 480px; border: 0; border-radius: 30px; background-color: #dfe7ff; background-image: radial-gradient(rgba(49,88,239,.22) 1px, transparent 1px), linear-gradient(122deg, transparent 42%, rgba(255,255,255,.88) 42.2%, rgba(255,255,255,.88) 44%, transparent 44.2%); box-shadow: 0 18px 40px rgba(16,26,53,.08); }
+.aston-page .aston-map-pin span { border-color: rgba(49,88,239,.23); color: #fff; background: var(--aston-rust); }
+.aston-page .aston-map-pin b { font-family: "Manrope", sans-serif; font-weight: 800; }
+.aston-page .aston-map-label { font-size: 17px; font-weight: 800; letter-spacing: -.04em; }
+.aston-page .aston-nearby { padding-top: 22px; border-color: var(--aston-line); }
+.aston-page .aston-nearby-list strong { color: var(--aston-rust-dark); }
+
+.aston-page .aston-contact { color: var(--aston-ink); background: #dfe7ff; }
+.aston-page .aston-contact-copy .aston-eyebrow { color: var(--aston-rust-dark); }
+.aston-page .aston-contact-copy h2 { font-family: "Manrope", sans-serif; font-size: clamp(50px, 6vw, 82px); font-weight: 800; letter-spacing: -.1em; }
+.aston-page .aston-contact-copy > p { color: #5e6b87; }
+.aston-page .aston-contact-links a { color: var(--aston-ink); font-weight: 700; }
+.aston-page .aston-contact-links a > svg { color: var(--aston-rust); }
+.aston-page .aston-contact-links small { color: #6e7990; }
+.aston-page .aston-contact-rera { border-color: rgba(16,26,53,.16); color: #68748d; }
+.aston-page .aston-contact-rera strong { color: var(--aston-ink); }
+.aston-page .aston-form { border-radius: 28px; box-shadow: 0 20px 42px rgba(16,26,53,.1); }
+.aston-page .aston-form-head h3 { font-size: 29px; font-weight: 800; letter-spacing: -.08em; }
+.aston-page .aston-form-head > span { color: var(--aston-rust-dark); }
+.aston-page .aston-form > .aston-button { border: 0; }
+.aston-page .aston-button-accent { color: #fff; background: var(--aston-rust); }
+.aston-page .aston-button-accent:hover { color: var(--aston-ink); background: #d9ef57; }
+
+.aston-page .aston-footer { background: #101a35; }
+.aston-page .aston-footer .aston-brand { color: #fff; }
+.aston-page .aston-footer .aston-brand-icon { color: var(--aston-ink); background: #d9ef57; }
+.aston-page .aston-footer .aston-brand-wordmark small { color: rgba(255,255,255,.6); }
+.aston-page .aston-footer-label { color: #d9ef57; }
+.aston-page .aston-socials a:hover { border-color: #d9ef57; color: var(--aston-ink); background: #d9ef57; }
+
+@media (max-width: 1020px) {
+  .aston-page .aston-container,
+  .aston-page .aston-hero-content { width: min(100% - 56px, 1280px); }
+  .aston-page .aston-nav nav { gap: 17px; }
+  .aston-page .aston-about-layout { gap: 60px; }
+}
+@media (max-width: 760px) {
+  .aston-page .aston-container,
+  .aston-page .aston-hero-content { width: calc(100% - 40px); }
+  .aston-page .aston-section { padding: 88px 0; }
+  .aston-page .aston-header { top: 10px; }
+  .aston-page .aston-header-scrolled { top: 0; }
+  .aston-page .aston-nav { min-height: 62px; padding-left: 13px; }
+  .aston-page .aston-nav nav,
+  .aston-page .aston-nav-cta { display: none; }
+  .aston-page .aston-menu-button { display: grid; place-items: center; width: 38px; height: 38px; }
+  .aston-page .aston-mobile-menu { inset: 70px 0 0; height: calc(100svh - 70px); background: #14265f; }
+  .aston-page .aston-mobile-menu > .aston-container > a { border-color: rgba(255,255,255,.2); }
+  .aston-page .aston-hero { min-height: 790px; }
+  .aston-page .aston-hero-image { top: 345px; right: 20px; bottom: 25px; left: 20px; border-radius: 25px; }
+  .aston-page .aston-hero-overlay { inset: 345px 20px 25px; border-radius: 25px; }
+  .aston-page .aston-hero-grid { background-size: 44px 44px; mask-image: linear-gradient(180deg, #000, transparent 65%); }
+  .aston-page .aston-hero-content { min-height: 790px; padding-top: 140px; padding-bottom: 110px; }
+  .aston-page .aston-hero h1 { margin-top: 20px; font-size: clamp(57px, 16.8vw, 92px); }
+  .aston-page .aston-hero h1 b { padding-left: 26px; }
+  .aston-page .aston-hero-subtitle { max-width: 325px; font-size: 13px; }
+  .aston-page .aston-hero-actions { width: max-content; }
+  .aston-page .aston-hero-side { right: 30px; bottom: 48px; min-width: 175px; padding: 16px; }
+  .aston-page .aston-hero-side strong { font-size: 27px; }
+  .aston-page .aston-hero-bottom { bottom: 9px; }
+  .aston-page .aston-hero-rera { display: none; }
+  .aston-page .aston-about-media { width: 87%; margin: 0 auto; }
+  .aston-page .aston-amenities-tabs { gap: 8px; }
+  .aston-page .aston-amenities-tabs button { padding: 16px; }
+  .aston-page .aston-gallery-grid { gap: 10px; }
+  .aston-page .aston-price-card { border-radius: 22px; }
+  .aston-page .aston-plan-card { border-radius: 22px; }
+  .aston-page .aston-location-map { min-height: 370px; border-radius: 23px; }
+  .aston-page .aston-form { border-radius: 22px; }
+  .aston-page .aston-footer { overflow: hidden; }
+}
+@media (max-width: 390px) {
+  .aston-page .aston-hero h1 { font-size: 57px; }
+  .aston-page .aston-hero h1 b { padding-left: 12px; }
+}
